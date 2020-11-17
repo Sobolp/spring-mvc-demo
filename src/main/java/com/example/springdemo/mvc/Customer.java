@@ -1,6 +1,7 @@
 package com.example.springdemo.mvc;
 
 
+import com.example.springdemo.mvc.validation.CourseCode;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -23,5 +24,8 @@ public class Customer {
 
     @Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "only 5 chars/digits")
     private String portalCode;
+
+    @CourseCode(value = "QWE", message = "must start with QWE")
+    private String courseCode;
 
 }
